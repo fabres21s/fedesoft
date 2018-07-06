@@ -1,0 +1,4 @@
+gem install bundler
+
+rails generate myapp --database=postgresql
+rails generate controller welcome index
