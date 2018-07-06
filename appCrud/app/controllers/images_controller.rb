@@ -4,6 +4,9 @@ class ImagesController < ApplicationController
         @image = Image.new
     end
     
+    def index
+        @images = Image.all
+    end
     
     def create
         
@@ -12,6 +15,11 @@ class ImagesController < ApplicationController
         
         #redirect_to @image
     end
+    
+    def show
+        @image = Image.find params[:id]
+    end
+    
     
     private 
     def images_params
