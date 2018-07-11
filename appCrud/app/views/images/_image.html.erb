@@ -1,2 +1,5 @@
 <%= image.description %>
 <%= link_to 'Edit', edit_image_path(image) %><br>
+<%= link_to 'Eliminar', image, method: :delete, data:{
+    confirm: 'Está seguro que desea eliminar esta imagen?'
+    }%> <br>
