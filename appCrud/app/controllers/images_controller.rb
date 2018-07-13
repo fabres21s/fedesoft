@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
     end
     
     def index
-        @images = Image.all
+        @images = Image.where user_id: current_user.id
     end
     
     def create
