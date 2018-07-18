@@ -11,9 +11,10 @@ class ImagesController < ApplicationController
     end
     
     def create
-        @image  = Image.new images_params
+       @image = current_user.images.new images_params
         @image.save
-        redirect_to @image
+        redirect_to '/'
+
     end
     
     def show
